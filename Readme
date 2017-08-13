@@ -1,0 +1,9 @@
+Docker does round_robin load balancing across all containers.
+However, when using proxy_pass, nginex only loads the configurations on load. 
+To bypass this use a dns reslover to proxy pass the docker containers.  
+Docker internal dns server is hardcoded to 127.0.11/this might change;
+Valid:resolver default chaches 5min;
+Scaling: docker-compose scale app=num
+Build: docker-compose Build
+Serve: docker-compose up
+$upstream: upstream varable will link resolver

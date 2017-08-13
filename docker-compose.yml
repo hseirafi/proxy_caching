@@ -1,0 +1,12 @@
+---
+version: '2'
+
+services:
+    app:
+        build: app
+    # newer version of docker do not require links for services. 
+    # docker runs a dns server to look up services. 
+    proxy:
+      build: proxy
+      ports: 
+      - "80:80"
