@@ -7,3 +7,6 @@ Scaling: docker-compose scale app=num
 Build: docker-compose Build
 Serve: docker-compose up
 $upstream: upstream varable will link resolver
+apt-get install dnsutils
+docker-compose exec proxy sh
+nslookup app
