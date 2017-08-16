@@ -10,3 +10,4 @@ $upstream: upstream varable will link resolver
 apt-get install dnsutils
 docker-compose exec proxy sh
 nslookup app
+docker-machine ip default
