@@ -3,13 +3,11 @@ version: '2'
 
 services:
     app:
-        build: app
+    build: app
     # newer version of docker do not require links for services. 
     # docker runs a dns server to look up services. 
     proxy:
       build: proxy
-    #   expose:
-    #   - 3000
       ports: 
       - "80:80"
     redis:
@@ -19,5 +17,5 @@ services:
         build: postgres
         ports: ["5432:5432"]
         restart: always
-    varnish:
-        build: varnish   
+    
+    
