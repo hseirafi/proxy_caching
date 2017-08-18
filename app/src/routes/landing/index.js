@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './Home';
+import Landing from './Landing';
 import Layout from '../../components/Layout';
 
 async function action({ fetch }) {
@@ -15,7 +15,7 @@ async function action({ fetch }) {
     title: 'React Starter Kit',
     component: (
       <Layout>
-        <Home news={data.news} />
+        <Landing news={data.news} />
       </Layout>
     ),
   };

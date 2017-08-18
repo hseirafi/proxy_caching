@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Home.css';
+import s from './Landing.css';
 
-class Home extends React.Component {
+class Landing extends React.Component {
   static propTypes = {
     news: PropTypes.arrayOf(
       PropTypes.shape({
@@ -39,4 +39,4 @@ class Home extends React.Component {
   }
 }
 
-export default withStyles(s)(Home);
+export default withStyles(s)(Landing);
