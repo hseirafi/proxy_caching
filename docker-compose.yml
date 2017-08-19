@@ -1,9 +1,8 @@
----
 version: '2'
 
 services:
     app:
-        build: app
+      build: app
     # newer version of docker do not require links for services. 
     # docker runs a dns server to look up services. 
     proxy:
@@ -17,5 +16,4 @@ services:
         build: postgres
         ports: ["5432:5432"]
         restart: always
-    
     

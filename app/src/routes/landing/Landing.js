@@ -13,7 +13,7 @@ class Landing extends React.Component {
       }),
     ).isRequired,
   };
-
+  
   render() {
     return (
       <div className={s.root}>
