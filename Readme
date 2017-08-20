@@ -11,3 +11,10 @@ apt-get install dnsutils
 docker-compose exec proxy sh
 nslookup app
 docker-machine ip default
+yarn run build -- --release --docker
+tag:docker tag main/app hossman/main_app
+deploy:docker push hossman/main_app
+tag:docker tag main/proxy hossman/main_proxy
+deploy:docker push hossman/main_proxy
+tag:docker tag main/redis hossman/main_redis
+deploy:docker push hossman/main_redis

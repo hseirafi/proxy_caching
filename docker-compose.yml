@@ -1,19 +1,30 @@
 version: '2'
-
 services:
-    app:
-      build: app
-    # newer version of docker do not require links for services. 
-    # docker runs a dns server to look up services. 
-    proxy:
-      build: proxy
+     app:
+      image: main/app
+      build: ./app
+      # depends_on:
+      #   - proxy 
+      ports: ["3000:3000"]
+     proxy:
+      image: main/proxy
+      build: ./proxy
       ports: 
       - "80:80"
-    redis:
-        build: redis
+     redis:
+        # container_name: redis
+        image: main/redis
+        build: ./redis
+        # depends_on:
+        # - proxy
         ports: ["6379:6379"]
-    postgres:
-        build: postgres
+     postgres:
+        # container_name: wild
+        # container_name: postgres
+        image: main/postgres
+        build: ./postgres
+        # depends_on:
+        # - proxy
         ports: ["5432:5432"]
         restart: always
     
